@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>All Movie Reviews</title>
+</head>
+<body>
+	<h1>List of All Movie Reviews on site</h1>
+	<ul>
+		<li th:each="review:${reviews}">
+			<a th:href="| @{/reviews/}${review.id}|">
+				<span th:text="${review.title}"></span>
+			</a>
+		</li>
+	</ul>
+</body>
+</html>
